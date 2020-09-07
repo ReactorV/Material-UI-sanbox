@@ -12,12 +12,12 @@ import Typography from '@material-ui/core/Typography';
 import ShareIcon from '@material-ui/icons/Share';
 
 const CoffeeCard = (props) => {
-    const { avatarSrc, title, subtitle, description, imageSrc } = props;
+    const { avatarUrl, title, subtitle, description, imageUrl } = props;
 
     return (
         <Card>
             <CardHeader
-                avatar={<Avatar src={avatarSrc} />}
+                avatar={<Avatar src={avatarUrl} />}
                 action={
                     <IconButton aria-label="settings">
                         <ShareIcon />
@@ -27,8 +27,8 @@ const CoffeeCard = (props) => {
                 subheader={subtitle}
             />
             <CardMedia
-                style={{ height: "150px" }}
-                image={imageSrc}
+                style={{ height: "150px", width: "150px" }}
+                image={imageUrl}
             />
             <CardContent>
                 <Typography variant="body2" component="p">
